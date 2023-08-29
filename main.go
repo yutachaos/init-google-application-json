@@ -26,6 +26,8 @@ func main() {
 	}
 
 	if err := os.WriteFile(outputJsonPath, []byte(json), 0755); err != nil {
-		log.Fatalln(err)
+		log.Fatal(err)
 	}
+
+	log.Printf("Successful set GOOGLE_APPLICATION_CREDENTIALS=%s \n", outputJsonPath)
 }
